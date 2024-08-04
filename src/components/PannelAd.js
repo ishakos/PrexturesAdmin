@@ -50,18 +50,14 @@ export default function PannelAd() {
   //getting (clubs + fixtures) data
   useEffect(() => {
     axios
-      .get(
-        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/scores/teams"
-      )
+      .get("https://prexturesserver.onrender.com/scores/teams")
       .then((response) => {
         if (response.data.teams) {
           setGetClubs(response.data.teams);
         }
       });
     axios
-      .get(
-        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/scores/fixtures"
-      )
+      .get("https://prexturesserver.onrender.com/scores/fixtures")
       .then((response) => {
         if (response.data.fixtures) {
           setFixtures(response.data.fixtures);
@@ -167,11 +163,7 @@ export default function PannelAd() {
       },
     };
     axios
-      .post(
-        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/admin/fulltime",
-        data,
-        config
-      )
+      .post("https://prexturesserver.onrender.com/admin/fulltime", data, config)
       .then((response) => {
         if (response.data.error) {
           setError(response.data.error);

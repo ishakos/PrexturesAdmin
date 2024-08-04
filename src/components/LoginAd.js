@@ -17,10 +17,7 @@ export default function LoginAd() {
   const login = () => {
     const data = { username: username, password: password };
     axios
-      .post(
-        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/admin/",
-        data
-      )
+      .post("https://prexturesserver.onrender.com/admin/", data)
       .then((response) => {
         if (!response.data.error) {
           sessionStorage.setItem("adminAccess", response.data);
