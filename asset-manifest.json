@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/PrexturesAdmin/static/css/main.38144738.css",
-    "main.js": "/PrexturesAdmin/static/js/main.3b4c734b.js",
+    "main.js": "/PrexturesAdmin/static/js/main.010252bf.js",
     "static/js/453.1c13788b.chunk.js": "/PrexturesAdmin/static/js/453.1c13788b.chunk.js",
     "static/media/emirates.jpg": "/PrexturesAdmin/static/media/emirates.e68678aec95798bb8610.jpg",
     "index.html": "/PrexturesAdmin/index.html",
     "main.38144738.css.map": "/PrexturesAdmin/static/css/main.38144738.css.map",
-    "main.3b4c734b.js.map": "/PrexturesAdmin/static/js/main.3b4c734b.js.map",
+    "main.010252bf.js.map": "/PrexturesAdmin/static/js/main.010252bf.js.map",
     "453.1c13788b.chunk.js.map": "/PrexturesAdmin/static/js/453.1c13788b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38144738.css",
-    "static/js/main.3b4c734b.js"
+    "static/js/main.010252bf.js"
   ]
 }
