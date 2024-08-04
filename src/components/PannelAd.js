@@ -49,16 +49,24 @@ export default function PannelAd() {
 
   //getting (clubs + fixtures) data
   useEffect(() => {
-    axios.get("http://localhost:3001/scores/teams").then((response) => {
-      if (response.data.teams) {
-        setGetClubs(response.data.teams);
-      }
-    });
-    axios.get("http://localhost:3001/scores/fixtures").then((response) => {
-      if (response.data.fixtures) {
-        setFixtures(response.data.fixtures);
-      }
-    });
+    axios
+      .get(
+        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/scores/teams"
+      )
+      .then((response) => {
+        if (response.data.teams) {
+          setGetClubs(response.data.teams);
+        }
+      });
+    axios
+      .get(
+        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/scores/fixtures"
+      )
+      .then((response) => {
+        if (response.data.fixtures) {
+          setFixtures(response.data.fixtures);
+        }
+      });
   }, []);
 
   //whenever token is deleted we perform an action
@@ -159,7 +167,11 @@ export default function PannelAd() {
       },
     };
     axios
-      .post("http://localhost:3001/admin/fulltime", data, config)
+      .post(
+        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/admin/fulltime",
+        data,
+        config
+      )
       .then((response) => {
         if (response.data.error) {
           setError(response.data.error);

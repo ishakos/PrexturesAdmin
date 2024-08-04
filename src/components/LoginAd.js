@@ -16,18 +16,23 @@ export default function LoginAd() {
 
   const login = () => {
     const data = { username: username, password: password };
-    axios.post("http://localhost:3001/admin/", data).then((response) => {
-      if (!response.data.error) {
-        sessionStorage.setItem("adminAccess", response.data);
-        navigate("/admin");
-      } else {
-        if (response.data.error === "Admin Does Not Exist!") {
-          setError1(true);
+    axios
+      .post(
+        "https://api.render.com/deploy/srv-cqnc7p2j1k6c73antgmg?key=Ge-HqoTj4OY/admin/",
+        data
+      )
+      .then((response) => {
+        if (!response.data.error) {
+          sessionStorage.setItem("adminAccess", response.data);
+          navigate("/admin");
         } else {
-          setError2(true);
+          if (response.data.error === "Admin Does Not Exist!") {
+            setError1(true);
+          } else {
+            setError2(true);
+          }
         }
-      }
-    });
+      });
   };
 
   return (
