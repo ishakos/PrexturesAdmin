@@ -12,6 +12,7 @@ export default function LoginAd() {
 
   useEffect(() => {
     sessionStorage.clear();
+    axios.get("https://prexturesserver.onrender.com/users/").then(() => {});
   }, []);
 
   const login = () => {
